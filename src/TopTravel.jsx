@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-function TopHotels() {
-  const hotels = [
+function TopTravel() {
+  const travel = [
     {
       name: "Hotel Annapurna",
       price: "$100",
@@ -97,20 +97,20 @@ function TopHotels() {
   return (
     <div style={{ fontFamily: 'Arial, sans-serif' }}>
       <div style={headerStyle}>
-        <img src="https://mir-s3-cdn-cf.behance.net/projects/404/3d23c3201281021.Y3JvcCwyNTAwLDE5NTUsMCw2NDM.jpg" alt="Top Hotels" style={headerImageStyle} />
-        <span style={headerTextStyle}>Top Hotels</span>
+        <img src="https://mir-s3-cdn-cf.behance.net/projects/404/3d23c3201281021.Y3JvcCwyNTAwLDE5NTUsMCw2NDM.jpg" alt="Top Travel" style={headerImageStyle} />
+        <span style={headerTextStyle}>Top TravelPackage</span>
       </div>
       <div>
         <div style={containerStyle}>
-          {hotels.map((hotel, index) => (
+          {travel.map((travel, index) => (
             <div key={index} style={cardStyle}>
-              <img src={hotel.image} alt={hotel.name} style={imageStyle} />
+              <img src={travel.image} alt={travel.name} style={imageStyle} />
               <div style={heartIconStyle}>♡</div>
               <div style={contentStyle}>
-                <h3>{hotel.name}</h3>
+                <h3>{travel.name}</h3>
               </div>
               <div style={priceStyle}>
-                <h3>{hotel.price}</h3>
+                <h3>{travel.price}</h3>
               </div>
             </div>
           ))}
@@ -121,4 +121,4 @@ function TopHotels() {
 }
 
 
-export default TopHotels;
+export default TopTravel;

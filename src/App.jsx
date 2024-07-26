@@ -17,6 +17,9 @@ import HeroSection from "./Destination";
 import About from "./About";
 import Travel from "./Travel";
 import Hotel from "./Hotels";
+import HotelDetail from "./HotelDetail";
+import TravelDetails from "./TravelDetails";
+import Dashboard from "./Drashboard.jsx/Dashboard";
 
 
 
@@ -30,6 +33,7 @@ function App() {
         <Nav />
         <Routes>
           <Route path='/'element={<About/>}/>
+          <Route path='/landing' element={<Landing/>}/>
           <Route path="/second" element={<Second />} />
           <Route path="/third" element={<Third />} />
           <Route path="/sign" element={<Sign />} />
@@ -38,7 +42,12 @@ function App() {
           <Route path="/Destination" element={<HeroSection/>}/>
           <Route path="/travel" element={<Travel/>}/>
           <Route path="/hotel" element={<HotelList/>}/>
-         
+          <Route path='/hotels/:id' element={<Hotel/>}/>
+          <Route path="/hotel/:id" element={<HotelDetail/>} />
+          <Route path="/travelPackages/:id" element={<TravelDetails/>}/>
+          <Route path='/travelPackages/:id' element={<Travel/>}/>
+          <Route path="/admin/*" element={<Dashboard/>}/>
+      
 
           
 

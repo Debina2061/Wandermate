@@ -1,7 +1,8 @@
 import React from "react";
+import ReactDOM from "react-dom";
 
 function TopDestination() {
-  const hotels = [
+  const destination = [
     {
       name: "Hotel Annapurna",
       price: "$100",
@@ -27,23 +28,26 @@ function TopDestination() {
   const containerStyle = {
     display: 'flex',
     flexWrap: 'wrap',
-    justifyContent: 'space-around',
-    marginTop: '9rem'
+    justifyContent: 'space-between',
+    marginTop: '2rem',
+    padding: '0 1rem'
   };
 
   const cardStyle = {
     position: 'relative',
-    width: 'calc(50% - 1rem)',
-    margin:  '1 rem',
+    width: 'calc(50% - 0.5rem)',
+    margin: '0.5rem 0',
     borderRadius: '10px',
     overflow: 'hidden',
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-    transition: 'transform 0.2s'
+    transition: 'transform 0.2s',
+    backgroundColor: 'white'
   };
 
   const imageStyle = {
     width: '100%',
-    height: 'auto'
+    height: '200px',
+    objectFit: 'cover'
   };
 
   const contentStyle = {
@@ -71,25 +75,50 @@ function TopDestination() {
     cursor: 'pointer'
   };
 
+  const headerStyle = {
+    display: 'flex',
+    alignItems: 'center',
+    margin: '20px'
+  };
+
+  const headerImageStyle = {
+    width: '40px',
+    height: '40px',
+    borderRadius: '50%',
+    objectFit: 'cover',
+    marginRight: '10px'
+  };
+
+  const headerTextStyle = {
+    fontSize: '20px',
+    fontWeight: 'bold'
+  };
+
   return (
-    <div>
-      <h2 style={{ textAlign: 'center', margin: '1rem 0', color:'black'}}>Top Destination</h2>
-      <div style={containerStyle}>
-        {destination.map((destination, index) => (
-          <div key={index} style={cardStyle}>
-            <img src={destination.image} alt={destination.name} style={imageStyle} />
-            <div style={heartIconStyle}>♡</div>
-            <div style={contentStyle}>
-              <h3>{destination.name}</h3>
+    <div style={{ fontFamily: 'Arial, sans-serif' }}>
+      <div style={headerStyle}>
+        <img src="https://mir-s3-cdn-cf.behance.net/projects/404/3d23c3201281021.Y3JvcCwyNTAwLDE5NTUsMCw2NDM.jpg" alt="Top Destination" style={headerImageStyle} />
+        <span style={headerTextStyle}>Top Destination</span>
+      </div>
+      <div>
+        <div style={containerStyle}>
+          {destination.map((destination, index) => (
+            <div key={index} style={cardStyle}>
+              <img src={destination.image} alt={destination.name} style={imageStyle} />
+              <div style={heartIconStyle}>♡</div>
+              <div style={contentStyle}>
+                <h3>{destination.name}</h3>
+              </div>
+              <div style={priceStyle}>
+                <h3>{destination.price}</h3>
+              </div>
             </div>
-            <div style={priceStyle}>
-              <h3>{destination.price}</h3>
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );
 }
+
 
 export default TopDestination;

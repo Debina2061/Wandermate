@@ -1,7 +1,7 @@
 import React from "react";
 import TopHotels from "./TopHotels"; // Make sure the path is correct based on your file structure
 import TopDestination from "./TopDestination";
-import ImageSlider from "./Imageslider";
+import TopTravel from "./TopTravel";
 
 function About() {
   const searchContainerStyle = {
@@ -18,7 +18,7 @@ function About() {
   };
 
   const inputStyle = {
-    width: '120%',
+    width: '100%',
     padding: '15px 20px',
     fontSize: '16px',
     border: '1px solid #ccc',
@@ -30,7 +30,7 @@ function About() {
 
   const searchButtonStyle = {
     position: 'absolute',
-    right: '-30px',
+    right: '5px',
     top: '50%',
     transform: 'translateY(-50%)',
     backgroundColor: '#007BFF',
@@ -65,6 +65,35 @@ function About() {
     textShadow: '0 1px 2px rgba(0, 0, 0, 0.5)'
   };
 
+  const footerStyle = {
+    backgroundColor: '#f0f0f0',
+    padding: '20px',
+    textAlign: 'center',
+    marginTop: '2rem'
+  };
+
+  const listContainerStyle = {
+    display: 'flex',
+    justifyContent: 'space-between',
+    maxWidth: '1200px',
+    margin: '0 auto'
+  };
+
+  const listStyleLeft = {
+    listStyleType: 'none',
+    textAlign: 'left'
+  };
+
+  const listStyleCenter = {
+    listStyleType: 'none',
+    textAlign: 'center'
+  };
+
+  const listStyleRight = {
+    listStyleType: 'none',
+    textAlign: 'right'
+  };
+
   return (
     <>
       <div style={{ textAlign: 'center', marginTop: '2rem' }}>
@@ -88,6 +117,38 @@ function About() {
       </div>
 
       <TopHotels />
+      <TopDestination />
+      <TopTravel />
+
+      <footer style={footerStyle}>
+        <div style={listContainerStyle}>
+          <ul style={listStyleLeft}>
+            <h2>About WanderMate</h2>
+            <li>About us</li>
+            <li>Home</li>
+            <li>Destination</li>
+            <li>Tours</li>
+            <li>Hotels</li>
+          </ul>
+          <ul style={listStyleCenter}>
+            <h2>Explore</h2>
+            <li>Flights</li>
+            <li>Car Rentals</li>
+            <li>Activities</li>
+            <li>Deals</li>
+          </ul>
+          <ul style={listStyleRight}>
+            <h2>Trip-Advisor Sites</h2>
+            <li>Contact us</li>
+            <li>Terms of Services</li>
+            <li>Privacy policies</li>
+            <li>Terms of Condition</li>
+          </ul>
+        </div>
+        <div style={{ textAlign: 'center', marginTop: '1rem' }}>
+          <p>&copy; 2024 WanderMate LLC. All rights reserved.</p>
+        </div>
+      </footer>
     </>
   );
 }

@@ -47,7 +47,6 @@ const Destination = () => {
 
   const images = [
     "https://cdn.getyourguide.com/img/tour/f640d191612acc27929ccdb076899e26a5cba46f4a1298f13aebf8674c89ad0d.jpg/145.jpg",
-    
     "https://www.planetware.com/wpimages/2019/12/nepal-in-pictures-beautiful-places-to-photograph-annapurna-range.jpg",
     "https://nepaltraveller.com/images/main/1602412856.sidetrackimagephotohraphy.jpg",
     "https://www.intrepidtravel.com/adventures/wp-content/uploads/2017/10/nepal_pokhara-fewa-lake-boats.jpg",
